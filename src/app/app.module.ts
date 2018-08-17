@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 import { AppComponent } from './app.component';
@@ -9,6 +11,7 @@ import { RosterComponent } from './roster/roster.component';
 import { TrainersComponent } from './trainers/trainers.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -19,10 +22,13 @@ import { LoginComponent } from './login/login.component';
     RosterComponent,
     TrainersComponent,
     DocumentsComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
