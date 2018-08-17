@@ -14,6 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 
+import { GameLevelPipe } from './game-level.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { ScheduleListComponent } from './schedule-list/schedule-list.component';
     DocumentsComponent,
     LoginComponent,
     NavbarComponent,
-    ScheduleListComponent
+    ScheduleListComponent,
+    GameLevelPipe
   ],
   imports: [
     BrowserModule,
