@@ -1,3 +1,30 @@
-<p>
-  schedule-list works!
-</p>
+<h1>Fillmore Football Schedule</h1>
+<div class="row">
+  <div class="col">
+    Opponent
+  </div>
+  <div class="col">
+    Time
+  </div>
+  <div class="col">
+    Location
+  </div>
+</div>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let game of schedule">
+      <div class="row">
+        <div class="col">
+          <h2><span *ngIf="game.homeAway === 'away'">@</span>{{game.opponent}}<span *ngIf="game.type === 'league'">*</span></h2>
+          <h6>{{game.dateTime.toLocaleString('en-us', { weekday: "short", month: "short", day: "numeric" })}}</h6>
+        </div>
+        <div class="col">
+          <h6>{{game.dateTime.toLocaleTimeString('en-US', {hour: 'numeric', minute:'numeric'})}}</h6>
+        </div>
+        <div class="col">
+          <h6>{{game.location}}</h6>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+<span>* Denotes league game</span>
