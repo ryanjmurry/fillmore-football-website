@@ -9,12 +9,12 @@ import { GameService } from '../game.service';
   providers: [GameService]
 })
 export class ScheduleComponent implements OnInit {
-  games: Game[];
+  schedule: Game[];
 
   constructor(private gameService: GameService) { }
 
   ngOnInit() {
-    this.games = this.gameService.getGames();
+    this.schedule = this.gameService.getGames();
   }
 
 }
