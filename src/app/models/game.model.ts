@@ -4,6 +4,7 @@ export class Game {
     public homeAway: string,
     public location: string,
     public type: string,
-    public opponent: string
+    public opponent: string,
+    public level: string
   ) {}
 }
