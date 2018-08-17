@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CoachesComponent } from './coaches/coaches.component';
 import { RosterComponent } from './roster/roster.component';
+import { TrainersComponent } from './trainers/trainers.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { RosterComponent } from './roster/roster.component';
     AppComponent,
     ScheduleComponent,
     CoachesComponent,
-    RosterComponent
+    RosterComponent,
+    TrainersComponent
   ],
   imports: [
     BrowserModule
