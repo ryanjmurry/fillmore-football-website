@@ -12,6 +12,7 @@ import { TrainersComponent } from './trainers/trainers.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     TrainersComponent,
     DocumentsComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    ScheduleListComponent
   ],
   imports: [
     BrowserModule,
