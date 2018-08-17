@@ -12,14 +12,14 @@ let santaPaulaDate = new Date('October 19, 2018 19:00:00');
 let malibuDate = new Date('October 26, 2018 19:30:00');
 
 export const GAMES: Game[] = [
-  new Game(viewPointDate, 'home', 'Fillmore High School', 'non-league', 'ViewPoint'),
-  new Game(brentwoodDate, 'away', 'Brentwood School', 'non-league', 'Brentwood School'),
-  new Game(trinityDate, 'home', 'Fillmore High School', 'non-league', 'Trinity Classical Academy'),
-  new Game(laCanadaDate, 'away', 'La Canada High School', 'non-league', 'La Canada'),
-  new Game(carpinteriaDate, 'away', 'Carpinteria High School', 'league', 'Carpinteria'),
-  new Game(nordhoffDate, 'home', 'Fillmore School', 'league', 'Nordhoff'),
-  new Game(huenemeDate, 'home', 'Fillmore High School', 'league', 'Hueneme'),
-  new Game(santaClaraDate, 'away', 'Santa Clara High School', 'league', 'Santa Clara'),
-  new Game(santaPaulaDate, 'home', 'Fillmore High School', 'league', 'Santa Paula'),
-  new Game(malibuDate, 'home', 'Fillmore High School', 'league', 'Malibu'),
+  new Game(viewPointDate, 'home', 'Fillmore High School', 'non-league', 'ViewPoint', 'varsity'),
+  new Game(brentwoodDate, 'away', 'Brentwood School', 'non-league', 'Brentwood School', 'varsity'),
+  new Game(trinityDate, 'home', 'Fillmore High School', 'non-league', 'Trinity Classical Academy', 'varsity'),
+  new Game(laCanadaDate, 'away', 'La Canada High School', 'non-league', 'La Canada', 'varsity'),
+  new Game(carpinteriaDate, 'away', 'Carpinteria High School', 'league', 'Carpinteria', 'varsity'),
+  new Game(nordhoffDate, 'home', 'Fillmore School', 'league', 'Nordhoff', 'varsity'),
+  new Game(huenemeDate, 'home', 'Fillmore High School', 'league', 'Hueneme', 'varsity'),
+  new Game(santaClaraDate, 'away', 'Santa Clara High School', 'league', 'Santa Clara', 'varsity'),
+  new Game(santaPaulaDate, 'home', 'Fillmore High School', 'league', 'Santa Paula', 'varsity'),
+  new Game(malibuDate, 'home', 'Fillmore High School', 'league', 'Malibu', 'varsity'),
 ];
