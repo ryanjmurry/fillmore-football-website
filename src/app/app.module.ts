@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
-
 import { AppComponent } from './app.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CoachesComponent } from './coaches/coaches.component';
@@ -13,10 +11,11 @@ import { DocumentsComponent } from './documents/documents.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
-
 import { GameLevelPipe } from './game-level.pipe';
 import { ScheduleFilterByLevelComponent } from './schedule-filter-by-level/schedule-filter-by-level.component';
-import { ScheduleFilterByLocationComponent } from './schedule-filter-by-location/schedule-filter-by-location.component';
+import { ScheduleFilterByHomeAwayComponent } from './schedule-filter-by-home-away/schedule-filter-by-home-away.component';
+import { GameHomeAwayPipe } from './game-home-away.pipe';
+import { ScheduleFilterByTypeComponent } from './schedule-filter-by-type/schedule-filter-by-type.component';
 
 
 
@@ -33,7 +32,9 @@ import { ScheduleFilterByLocationComponent } from './schedule-filter-by-location
     ScheduleListComponent,
     GameLevelPipe,
     ScheduleFilterByLevelComponent,
-    ScheduleFilterByLocationComponent
+    ScheduleFilterByHomeAwayComponent,
+    GameHomeAwayPipe,
+    ScheduleFilterByTypeComponent
   ],
   imports: [
     BrowserModule,
