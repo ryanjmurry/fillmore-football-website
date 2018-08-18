@@ -15,7 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 
 import { GameLevelPipe } from './game-level.pipe';
-import { ScheduleFilterComponent } from './schedule-filter/schedule-filter.component';
+import { ScheduleFilterByLevelComponent } from './schedule-filter-by-level/schedule-filter-by-level.component';
 
 
 
@@ -31,7 +31,7 @@ import { ScheduleFilterComponent } from './schedule-filter/schedule-filter.compo
     NavbarComponent,
     ScheduleListComponent,
     GameLevelPipe,
-    ScheduleFilterComponent
+    ScheduleFilterByLevelComponent
   ],
   imports: [
     BrowserModule,
