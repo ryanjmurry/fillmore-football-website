@@ -16,6 +16,7 @@ import { ScheduleFilterByLevelComponent } from './schedule-filter-by-level/sched
 import { ScheduleFilterByHomeAwayComponent } from './schedule-filter-by-home-away/schedule-filter-by-home-away.component';
 import { GameHomeAwayPipe } from './game-home-away.pipe';
 import { ScheduleFilterByTypeComponent } from './schedule-filter-by-type/schedule-filter-by-type.component';
+import { GameTypePipe } from './game-type.pipe';
 
 
 
@@ -34,7 +35,8 @@ import { ScheduleFilterByTypeComponent } from './schedule-filter-by-type/schedul
     ScheduleFilterByLevelComponent,
     ScheduleFilterByHomeAwayComponent,
     GameHomeAwayPipe,
-    ScheduleFilterByTypeComponent
+    ScheduleFilterByTypeComponent,
+    GameTypePipe
   ],
   imports: [
     BrowserModule,
