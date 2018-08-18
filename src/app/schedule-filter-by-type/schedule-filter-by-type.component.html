@@ -1,3 +1,5 @@
-<p>
-  schedule-filter-by-type works!
-</p>
+<select (change)="onChange($event.target.value)">
+    <option value="all" selected="selected">All Games</option>
+    <option value="league">League Games</option>
+    <option value="non-league">Non-League Games</option>
+  </select>
