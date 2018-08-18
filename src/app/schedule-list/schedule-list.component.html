@@ -1,5 +1,6 @@
 <h1>Fillmore Football Schedule</h1>
-<app-schedule-filter-by-level (changeSender)="filterSchedule($event)"></app-schedule-filter-by-level>
+<app-schedule-filter-by-level (changeSender)="filterScheduleByLevel($event)"></app-schedule-filter-by-level>
+<app-schedule-filter-by-home-away (changeSender)="filterScheduleByHomeAway($event)"></app-schedule-filter-by-home-away>
 <div class="row">
   <div class="col">
     Opponent
@@ -12,7 +13,7 @@
   </div>
 </div>
 <ul class="list-group list-group-flush">
-    <li class="list-group-item" *ngFor="let game of schedule | gamelevel:filterByGameLevel">
+    <li class="list-group-item" *ngFor="let game of schedule | gamelevel:filterGamesByLevel | gamehomeaway:filterGamesByHomeAway">
       <div class="row">
         <div class="col">
           <h2><span *ngIf="game.homeAway === 'away'">@</span>{{game.opponent}}<span *ngIf="game.type === 'league'">*</span></h2>
