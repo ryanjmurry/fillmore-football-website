@@ -5,6 +5,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   templateUrl: './schedule-filter-by-home-away.component.html',
   styleUrls: ['./schedule-filter-by-home-away.component.css']
 })
+
 export class ScheduleFilterByHomeAwayComponent {
   @Output() changeSender = new EventEmitter();
 
