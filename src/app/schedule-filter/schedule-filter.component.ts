@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-schedule-filter',
   templateUrl: './schedule-filter.component.html',
   styleUrls: ['./schedule-filter.component.css']
 })
-export class ScheduleFilterComponent implements OnInit {
+export class ScheduleFilterComponent {
+  @Output() changeSender = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  onChange(gameLevelOption: string) {
+    this.changeSender.emit(gameLevelOption);
   }
 
 }
