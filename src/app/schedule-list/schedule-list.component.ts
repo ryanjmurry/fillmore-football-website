@@ -11,12 +11,17 @@ export class ScheduleListComponent {
 
   filterGamesByLevel: string = 'V';
   filterGamesByHomeAway: string = 'all';
+  filterGamesByType: string = 'all';
 
-  filterScheduleByLevel(gameLevelOption) {
+  filterScheduleByLevel(gameLevelOption: string) {
     this.filterGamesByLevel = gameLevelOption;
   }
 
-  filterScheduleByHomeAway(gameHomeAwayOption) {
+  filterScheduleByHomeAway(gameHomeAwayOption: string) {
     this.filterGamesByHomeAway = gameHomeAwayOption;
+  }
+
+  filterScheduleByType(gameTypeOption: string) {
+    this.filterGamesByType = gameTypeOption
   }
 }
