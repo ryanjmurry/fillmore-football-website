@@ -1,3 +1,4 @@
-<p>
-  schedule-filter works!
-</p>
+<select (change)="onChange($event.target.value)">
+  <option value="V" selected="selected">Varsity Schedule</option>
+  <option value="JV">Junior Varsity Schedule</option>
+</select>
