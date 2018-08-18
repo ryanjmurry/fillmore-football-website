@@ -8,4 +8,10 @@ import { Game } from '../models/game.model';
 })
 export class ScheduleListComponent {
   @Input() schedule: Game[];
+
+  filterByGameLevel: string = "V";
+
+  filterSchedule(gameLevelOption) {
+    this.filterByGameLevel = gameLevelOption;
+  }
 }
