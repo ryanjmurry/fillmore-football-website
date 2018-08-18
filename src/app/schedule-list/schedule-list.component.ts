@@ -9,9 +9,14 @@ import { Game } from '../models/game.model';
 export class ScheduleListComponent {
   @Input() schedule: Game[];
 
-  filterByGameLevel: string = "V";
+  filterGamesByLevel: string = 'V';
+  filterGamesByHomeAway: string = 'all';
 
-  filterSchedule(gameLevelOption) {
-    this.filterByGameLevel = gameLevelOption;
+  filterScheduleByLevel(gameLevelOption) {
+    this.filterGamesByLevel = gameLevelOption;
+  }
+
+  filterScheduleByHomeAway(gameHomeAwayOption) {
+    this.filterGamesByHomeAway = gameHomeAwayOption;
   }
 }
