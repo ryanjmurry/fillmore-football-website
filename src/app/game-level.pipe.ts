@@ -16,8 +16,7 @@ export class GameLevelPipe implements PipeTransform {
         }
       }
       return output;
-    }
-    else {
+    } else {
       for (let i = 0; i < input.length; i++) {
         if (input[i].level === "JV") {
           output.push(input[i]);
