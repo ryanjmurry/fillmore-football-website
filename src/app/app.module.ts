@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { ScheduleComponent } from './schedule/schedule.component';
@@ -56,9 +58,11 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     AngularFontAwesomeModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
