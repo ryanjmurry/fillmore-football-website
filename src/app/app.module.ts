@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { routing } from './app.routing';
-
 import { AppComponent } from './app.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CoachesComponent } from './coaches/coaches.component';
@@ -18,11 +17,9 @@ import { ScheduleFilterByLevelComponent } from './schedule-filter-by-level/sched
 import { ScheduleFilterByHomeAwayComponent } from './schedule-filter-by-home-away/schedule-filter-by-home-away.component';
 import { ScheduleFilterByTypeComponent } from './schedule-filter-by-type/schedule-filter-by-type.component';
 import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
-
 import { GameLevelPipe } from './game-level.pipe';
 import { GameHomeAwayPipe } from './game-home-away.pipe';
 import { GameTypePipe } from './game-type.pipe';
-
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
