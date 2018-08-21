@@ -1,4 +1,6 @@
-# Fillmore Football ![alt text](./src/assets/img/fillmore-flashes-logo-sm.jpg "Fillmore Flashes Logo")
+![alt text](./src/assets/img/fillmore-flashes-logo-sm.jpg "Fillmore Flashes Logo")
+
+# Fillmore Football 
 
 ### Epicodus Angular Independent Project | 08.17.18
 #### By Ryan Murry
