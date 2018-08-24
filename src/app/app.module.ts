@@ -27,6 +27,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ScheduleAddComponent } from './components/schedule/schedule-add/schedule-add.component';
 import { TimePipe } from './pipes/time.pipe';
 import { CoachesEditComponent } from './components/coaches/coaches-edit/coaches-edit.component';
+import { CoachesAddComponent } from './components/coaches/coaches-add/coaches-add.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -56,7 +57,8 @@ export const firebaseConfig = {
     HomeComponent,
     ScheduleAddComponent,
     TimePipe,
-    CoachesEditComponent
+    CoachesEditComponent,
+    CoachesAddComponent
   ],
   imports: [
     BrowserModule,
