@@ -11,6 +11,7 @@ export class CoachesComponent implements OnInit {
   coaches;
   editCoachClicked: boolean = false;
   selectedCoachToEdit;
+  filterCoachesByLevelParam: string = 'V';
 
   constructor(private coachService: CoachService) { }
 
@@ -18,6 +19,10 @@ export class CoachesComponent implements OnInit {
     this.coachService.getCoaches().subscribe(coaches => {
       this.coaches = coaches;
     })
+  }
+
+  filterCoachesByLevel(coachLevelOption: string) {
+    this.filterCoachesByLevelParam = coachLevelOption;
   }
 
   editCoachClickedToggle(coachToEdit) {
