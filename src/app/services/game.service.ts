@@ -17,4 +17,8 @@ export class GameService {
   addGame(newGame: Game) {
     this.games.push(newGame);
   }
+
+  getGameById(gameId) {
+    return this.database.object('games/' + gameId);
+  }
 }
