@@ -5,6 +5,7 @@ import { GameService } from '../../../services/game.service';
   selector: 'app-schedule-edit',
   templateUrl: './schedule-edit.component.html',
   styleUrls: ['./schedule-edit.component.css'],
+  providers: [GameService]
 })
 export class ScheduleEditComponent {
   @Input() selectedGameToEdit;
