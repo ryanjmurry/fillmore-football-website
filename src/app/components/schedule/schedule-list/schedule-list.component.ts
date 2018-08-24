@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../../../services/game.service';
-import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +12,7 @@ export class ScheduleListComponent implements OnInit {
   editGameClicked: boolean = false;
   selectedGameToEdit;
 
-  constructor(private gameService: GameService, private router: Router) {}
+  constructor(private gameService: GameService) {}
   
   ngOnInit() {
     this.gameService.getGames().subscribe(schedule => {

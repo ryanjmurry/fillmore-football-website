@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CoachService } from '../../services/coach.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-coaches',
@@ -13,7 +12,7 @@ export class CoachesComponent implements OnInit {
   editCoachClicked: boolean = false;
   selectedCoachToEdit;
 
-  constructor(private coachService: CoachService, private router: Router) { }
+  constructor(private coachService: CoachService) { }
 
   ngOnInit() {
     this.coachService.getCoaches().subscribe(coaches => {
