@@ -1,3 +1,16 @@
-<p>
-  roster works!
-</p>
+<h1>Fillmore High School Roster</h1>
+<div *ngFor="let player of players">
+  <p>First Name: {{player?.firstName}}</p>
+  <p>Last Name: {{player?.lastName}}</p>
+  <p>Number: #{{player?.number}}</p>
+  <p>Offensive Position: {{player?.offPosition}}</p>
+  <p>Defensive Position: {{player?.defPosition}}</p>
+  <p>Grade: {{player?.grade}}</p>
+  <p>Level: {{player?.level}}</p>
+  <span (click)="editPlayerClickedToggle(player)"><fa name="edit"></fa></span>
+  <span (click)="deletePlayer(player)"><fa name="trash"></fa></span>
+  <hr>
+</div>
+<div *ngIf="editPlayerClicked">
+  <app-roster-edit [selectedPlayerToEdit]="selectedPlayerToEdit"></app-roster-edit>
+</div>
