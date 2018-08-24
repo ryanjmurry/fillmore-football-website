@@ -14,7 +14,7 @@
   </div>
 </div>
 <ul class="list-group list-group-flush">
-    <li class="list-group-item" *ngFor="let game of games">
+    <li class="list-group-item" *ngFor="let game of games | gamelevel:filterGamesByLevel | gametype:filterGamesByType | gamehomeaway:filterGamesByHomeAway">
       <div class="row">
         <div class="col">
           <h2><span *ngIf="game.homeAway === 'away'">@</span>{{game.opponent}}<span *ngIf="game.type === 'league'">*</span></h2>
