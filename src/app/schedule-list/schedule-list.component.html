@@ -12,6 +12,9 @@
   <div class="col">
     Location
   </div>
+  <div class="col">
+
+  </div>
 </div>
 <ul class="list-group list-group-flush">
     <li class="list-group-item" *ngFor="let game of games | gamelevel:filterGamesByLevel | gametype:filterGamesByType | gamehomeaway:filterGamesByHomeAway">
@@ -25,6 +28,9 @@
         </div>
         <div class="col">
           <h6>{{game?.location}}</h6>
+        </div>
+        <div class="col">
+          <span (click)="goToEditPage(game)"><fa name="edit"></fa></span>
         </div>
       </div>
 
