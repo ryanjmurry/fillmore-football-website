@@ -14,20 +14,23 @@
   </div>
 </div>
 <ul class="list-group list-group-flush">
-    <li class="list-group-item" *ngFor="let game of schedule | gamelevel:filterGamesByLevel | gamehomeaway:filterGamesByHomeAway | gametype:filterGamesByType">
+    <li class="list-group-item" *ngFor="let game of games">
       <div class="row">
         <div class="col">
           <h2><span *ngIf="game.homeAway === 'away'">@</span>{{game.opponent}}<span *ngIf="game.type === 'league'">*</span></h2>
-          <h6>{{game.dateTime.toLocaleString('en-us', { weekday: "short", month: "short", day: "numeric" })}}</h6>
+          <h6>{{game?.date}}</h6>
         </div>
         <div class="col">
-          <h6>{{game.dateTime.toLocaleTimeString('en-US', {hour: 'numeric', minute:'numeric'})}}</h6>
+          <h6>{{game?.time}}</h6>
         </div>
         <div class="col">
-          <h6>{{game.location}}</h6>
+          <h6>{{game?.location}}</h6>
         </div>
       </div>
 
     </li>
   </ul>
 <span>* Denotes league game</span>
+
+<!-- .toLocaleString('en-us', { weekday: "short", month: "short", day: "numeric" })} -->
+<!-- .toLocaleTimeString('en-US', {hour: 'numeric', minute:'numeric'})} -->
