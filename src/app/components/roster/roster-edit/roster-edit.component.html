@@ -1,3 +1,40 @@
-<p>
-  roster-edit works!
-</p>
+<h3>Edit Player</h3>
+<label>Level</label>
+<select [(ngModel)]="selectedPlayerToEdit.level">
+  <option value="V">Varsity</option>
+  <option value="JV">JV</option>
+</select>
+<label>Player First Name: </label>
+<input [(ngModel)]="selectedPlayerToEdit.firstName">
+<br>
+<label>Player Last Name: </label>
+<input [(ngModel)]="selectedPlayerToEdit.lastName">
+<br>
+<label>Number</label>
+<input type="number" [(ngModel)]="selectedPlayerToEdit.number">
+<label>Primary Offensive Position</label>
+<select [(ngModel)]="selectedPlayerToEdit.offPosition">
+  <option value="QB">Quarterback</option>
+  <option value="RB">Running Back</option>
+  <option value="FB">Full Back</option>
+  <option value="WR">Wide Receiver</option>
+  <option value="TE">Tight End</option>
+  <option value="OL">Offensive Lineman</option>
+  <option value="ATH">Athlete</option>
+</select>
+<label >Primary Defensive Position</label>
+<select [(ngModel)]="selectedPlayerToEdit.defPosition">
+  <option value="DT">Defensive Tackle</option>
+  <option value="DE">Defensive End</option>
+  <option value="LB">Linebacker</option>
+  <option value="CB">Corner Back</option>
+  <option value="S">Safety</option>
+</select>
+<label>Grade</label>
+<select [(ngModel)]="selectedPlayerToEdit.grade">
+  <option value="9">Freshman</option>
+  <option value="10">Sophomore</option>
+  <option value="11">Junior</option>
+  <option value="12">Senior</option>
+</select>
+<button class="btn btn-danger"(click)="beginUpdatingPlayer(selectedPlayerToEdit)">Update</button>
