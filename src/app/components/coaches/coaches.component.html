@@ -1,5 +1,6 @@
 <h1>Fillmore High School Coaching Staff</h1>
-<div *ngFor="let coach of coaches">
+<app-coaches-filter-by-level (changeSender)="filterCoachesByLevel($event)"></app-coaches-filter-by-level>
+<div *ngFor="let coach of coaches | coachlevel:filterCoachesByLevelParam">
   <p>Name: {{coach?.name}}</p>
   <p>Email: {{coach?.email}}</p>
   <p>Title: {{coach?.title}}</p>
