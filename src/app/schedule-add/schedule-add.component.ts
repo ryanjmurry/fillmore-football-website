@@ -25,7 +25,7 @@ export class ScheduleAddComponent {
   submitForm(levelInput, opponentInput, dateInput, timeInput, homeAwayInput, locationInput, typeInput) {
     let newDate = new Date(dateInput + " " + timeInput);
     dateInput = newDate.toLocaleString('en-us', { weekday: "short", month: "short", day: "numeric", year: "numeric" });
-    timeInput = newDate.toLocaleTimeString('en-US', {hour: '2-digit', minute:'numeric'});
+    // timeInput = newDate.toLocaleTimeString('en-US', {hour: '2-digit', minute:'numeric'});
     let newGame = new Game(dateInput, timeInput, homeAwayInput, locationInput, typeInput, opponentInput, levelInput);
     this.gameService.addGame(newGame);
   }
