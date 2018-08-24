@@ -17,8 +17,4 @@ export class GameService {
   addGame(newGame: Game) {
     this.games.push(newGame);
   }
-
-  getGamesById(gameOfInterest: ) {
-
-  }
 }
