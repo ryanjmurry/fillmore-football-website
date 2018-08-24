@@ -11,6 +11,8 @@ import { Game } from '../models/game.model';
 })
 export class ScheduleListComponent implements OnInit {
   games;
+  editGameClicked: boolean = false;
+  selectedGameToEdit;
 
   constructor(private gameService: GameService, private router: Router) {}
   
@@ -36,7 +38,12 @@ export class ScheduleListComponent implements OnInit {
     this.filterGamesByType = gameTypeOption
   }
 
-  goToEditPage(clickedGame) {
-    this.router.navigate(['schedule/edit', clickedGame.$key])
+  editGameClickedToggle(gameToEdit) {
+    this.editGameClicked = !this.editGameClicked;
+    this.selectedGameToEdit = gameToEdit;
   }
+
+  // goToEditPage(clickedGame) {
+  //   this.router.navigate(['schedule/edit', clickedGame.$key])
+  // }
 }
