@@ -20,14 +20,14 @@
     <li class="list-group-item" *ngFor="let game of games | gamelevel:filterGamesByLevel | gametype:filterGamesByType | gamehomeaway:filterGamesByHomeAway">
       <div class="row">
         <div class="col">
-          <h2><span *ngIf="game.homeAway === 'away'">@</span>{{game.opponent}}<span *ngIf="game.type === 'league'">*</span></h2>
-          <h6>{{game?.date}}</h6>
+          <p><span *ngIf="game.homeAway === 'away'">@</span>{{game.opponent}}<span *ngIf="game.type === 'league'">*</span></p>
+          <p>{{game?.date}}</p>
         </div>
         <div class="col">
-          <h6>{{game?.time | time}}</h6>
+          <p>{{game?.time | time}}</p>
         </div>
         <div class="col">
-          <h6>{{game?.location}}</h6>
+          <p>{{game?.location}}</p>
         </div>
         <div class="col">
           <span (click)="editGameClickedToggle(game)"><fa name="edit"></fa></span>
