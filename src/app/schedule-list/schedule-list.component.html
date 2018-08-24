@@ -30,13 +30,15 @@
           <h6>{{game?.location}}</h6>
         </div>
         <div class="col">
-          <span (click)="goToEditPage(game)"><fa name="edit"></fa></span>
+          <span (click)="editGameClickedToggle(game)"><fa name="edit"></fa></span>
         </div>
       </div>
-
+      
     </li>
   </ul>
 <span>* Denotes league game</span>
-
+<div *ngIf="editGameClicked">
+  <app-schedule-edit [selectedGameToEdit]="selectedGameToEdit"></app-schedule-edit>
+</div>
 <!-- .toLocaleString('en-us', { weekday: "short", month: "short", day: "numeric" })} -->
 <!-- .toLocaleTimeString('en-US', {hour: 'numeric', minute:'numeric'})} -->
