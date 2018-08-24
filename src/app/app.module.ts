@@ -17,15 +17,15 @@ import { ScheduleFilterByLevelComponent } from './schedule-filter-by-level/sched
 import { ScheduleFilterByHomeAwayComponent } from './schedule-filter-by-home-away/schedule-filter-by-home-away.component';
 import { ScheduleFilterByTypeComponent } from './schedule-filter-by-type/schedule-filter-by-type.component';
 import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
-import { GameLevelPipe } from './game-level.pipe';
-import { GameHomeAwayPipe } from './game-home-away.pipe';
-import { GameTypePipe } from './game-type.pipe';
+import { GameLevelPipe } from './pipes/game-level.pipe';
+import { GameHomeAwayPipe } from './pipes/game-home-away.pipe';
+import { GameTypePipe } from './pipes/game-type.pipe';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HomeComponent } from './home/home.component';
 import { ScheduleAddComponent } from './schedule-add/schedule-add.component';
-import { TimePipe } from './time.pipe';
+import { TimePipe } from './pipes/time.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,

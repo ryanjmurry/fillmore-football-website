@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import { Game } from './models/game.model';
+import { Game } from '../models/game.model';
 
 @Pipe({
   name: "gamelevel",
