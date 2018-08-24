@@ -29,6 +29,4 @@ export class ScheduleAddComponent {
     let newGame = new Game(dateInput, timeInput, homeAwayInput, locationInput, typeInput, opponentInput, levelInput);
     this.gameService.addGame(newGame);
   }
-
-
 }
