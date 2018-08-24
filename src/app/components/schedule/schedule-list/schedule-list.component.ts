@@ -11,6 +11,9 @@ export class ScheduleListComponent implements OnInit {
   games;
   editGameClicked: boolean = false;
   selectedGameToEdit;
+  filterGamesByLevel: string = 'V';
+  filterGamesByHomeAway: string = 'all';
+  filterGamesByType: string = 'all';
 
   constructor(private gameService: GameService) {}
   
@@ -19,10 +22,6 @@ export class ScheduleListComponent implements OnInit {
       this.games = schedule;
     })
   }
-
-  filterGamesByLevel: string = 'V';
-  filterGamesByHomeAway: string = 'all';
-  filterGamesByType: string = 'all';
 
   filterScheduleByLevel(gameLevelOption: string) {
     this.filterGamesByLevel = gameLevelOption;
