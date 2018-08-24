@@ -1,8 +1,10 @@
 export class Player {
   constructor(
-    public name: string,
-    public jerseyNumber: number,
-    public position: string,
+    public firstName: string,
+    public lastName: string,
+    public number: number,
+    public offPosition: string,
+    public defPosition: string,
     public grade: string,
     public level: string,
     public height: number,
