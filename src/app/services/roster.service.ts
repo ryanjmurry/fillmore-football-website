@@ -3,14 +3,14 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import { Player } from '../models/player.model';
 
 @Injectable()
-export class PlayerService {
+export class RosterService {
   players: FirebaseListObservable<any[]>;
 
   constructor(private db: AngularFireDatabase) { 
     this.players = db.list('players');
   }
 
-  getPlayeres() {
+  getPlayers() {
     return this.players;
   }
 
@@ -24,11 +24,13 @@ export class PlayerService {
 
   updatePlayer(localUpdatedPlayer) {
     let playerInDb = this.getPlayerById(localUpdatedPlayer.$key);
-    playerInDb.update({name: localUpdatedPlayer.name,
-                    email: localUpdatedPlayer.email,
+    playerInDb.update({firstName: localUpdatedPlayer.firstName,
+                    lastName: localUpdatedPlayer.lastName,
                     level: localUpdatedPlayer.level,
-                    title: localUpdatedPlayer.title,
-                    bio: localUpdatedPlayer.bio
+                    number: localUpdatedPlayer.number,
+                    offPosition: localUpdatedPlayer.offPosition,
+                    defPosition: localUpdatedPlayer.defPosition,
+                    grade: localUpdatedPlayer.grade
     })
   }
 
