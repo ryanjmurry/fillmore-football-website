@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Game } from '../models/game.model';
-import { GameService } from '../services/game.service';
+import { GameService } from '../../../services/game.service';
 
 @Component({
   selector: 'app-schedule-edit',

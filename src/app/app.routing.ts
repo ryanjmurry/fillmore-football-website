@@ -1,9 +1,10 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ScheduleComponent } from './schedule/schedule.component';
-import { ScheduleAddComponent } from './schedule-add/schedule-add.component';
-import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
+import { HomeComponent } from './components/home/home.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
+import { ScheduleEditComponent } from './components/schedule/schedule-edit/schedule-edit.component';
+import { ScheduleAddComponent } from './components/schedule/schedule-add/schedule-add.component';
+import { CoachesComponent } from './components/coaches/coaches.component';
 
 const appRoutes: Routes = [ 
   {
@@ -19,8 +20,8 @@ const appRoutes: Routes = [
     component: ScheduleAddComponent
   },
   {
-    path: 'schedule/edit/:id',
-    component: ScheduleEditComponent
+    path: 'coaches',
+    component: CoachesComponent
   }
 ];
 
