@@ -43,6 +43,11 @@ export class ScheduleListComponent implements OnInit {
     this.selectedGameToEdit = gameToEdit;
   }
 
+  deleteGame(gameToDelete) {
+    if (confirm("Do you really want to delete?"))
+    this.gameService.deleteGame(gameToDelete);
+  }
+
   // goToEditPage(clickedGame) {
   //   this.router.navigate(['schedule/edit', clickedGame.$key])
   // }
