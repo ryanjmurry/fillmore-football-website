@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Game } from './models/game.model';
-// import { GAMES } from './mock-games';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -14,9 +12,4 @@ export class GameService {
   getGames() {
     return this.games;
   }
-
-  // getGames() {
-  //   return GAMES;
-  // }
-
 }
