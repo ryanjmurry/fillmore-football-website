@@ -6,6 +6,8 @@ import { ScheduleEditComponent } from './components/schedule/schedule-edit/sched
 import { ScheduleAddComponent } from './components/schedule/schedule-add/schedule-add.component';
 import { CoachesComponent } from './components/coaches/coaches.component';
 import { CoachesAddComponent } from './components/coaches/coaches-add/coaches-add.component';
+import { RosterComponent } from './components/roster/roster.component';
+import { RosterAddComponent } from './components/roster/roster-add/roster-add.component';
 
 const appRoutes: Routes = [ 
   {
@@ -27,6 +29,14 @@ const appRoutes: Routes = [
   {
     path: 'coaches/add',
     component: CoachesAddComponent
+  },
+  {
+    path: 'roster',
+    component: RosterComponent
+  },
+  {
+    path: 'roster/add',
+    component: RosterAddComponent
   }
 ];
 
