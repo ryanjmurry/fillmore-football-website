@@ -1,0 +1,164 @@
+{ "games": [
+  {
+    "date": "Fri, Aug 17",
+    "time": "7:00 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "V",
+    "type": "non-league",
+    "opponent": "Viewpoint"
+  },
+  {
+    "date": "Fri, Aug 24",
+    "time": "7:30 PM",
+    "homeAway": "away",
+    "locaton": "Brentwood High School",
+    "level": "V",
+    "type": "non-league",
+    "opponent": "Brentwood"
+  },
+  {
+    "date": "Fri, Aug 31",
+    "time": "7:30 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "V",
+    "type": "non-league",
+    "opponent": "Trinity Classical Academy"
+  },
+  {
+    "date": "Fri, Sep 7",
+    "time": "7:00 PM",
+    "homeAway": "away",
+    "locaton": "La Canada High School",
+    "level": "V",
+    "type": "non-league",
+    "opponent": "La Canada"
+  },
+  {
+    "date": "Fri, Sep 14",
+    "time": "7:30 PM",
+    "homeAway": "away",
+    "locaton": "Carpinteria High School",
+    "level": "V",
+    "type": "league",
+    "opponent": "Carpinteria"
+  },
+  {
+    "date": "Fri, Sep 21",
+    "time": "7:30 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "V",
+    "type": "league",
+    "opponent": "Nordhoff"
+  },
+  {
+    "date": "Fri, Sep 28",
+    "time": "7:00 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "V",
+    "type": "league",
+    "opponent": "Hueneme"
+  },
+  {
+    "date": "Fri, Oct 12",
+    "time": "7:30 PM",
+    "homeAway": "away",
+    "locaton": "Santa Clara High School",
+    "level": "V",
+    "type": "league",
+    "opponent": "Santa Clara"
+  },
+  {
+    "date": "Fri, Oct 19",
+    "time": "7:00 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "V",
+    "type": "league",
+    "opponent": "Santa Paula"
+  },
+  {
+    "date": "Fri, Oct 26",
+    "time": "7:30 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "V",
+    "type": "league",
+    "opponent": "Malibu"
+  },
+  {
+    "date": "Fri, Aug 17",
+    "time": "5:30 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "JV",
+    "type": "non-league",
+    "opponent": "Burbank"
+  },
+  {
+    "date": "Thu, Aug 23",
+    "time": "6:00 PM",
+    "homeAway": "away",
+    "locaton": "Brentwood High School",
+    "level": "JV",
+    "type": "non-league",
+    "opponent": "Brentwood"
+  },
+  {
+    "date": "Sat, Sep 1",
+    "time": "10:00 AM",
+    "homeAway": "away",
+    "locaton": "Montebello High School",
+    "level": "JV",
+    "type": "non-league",
+    "opponent": "Montebello"
+  },
+  {
+    "date": "Thu, Sep 6",
+    "time": "4:30 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "JV",
+    "type": "non-league",
+    "opponent": "La Canada"
+  },
+  {
+    "date": "Fri, Sep 14",
+    "time": "4:30 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "JV",
+    "type": "league",
+    "opponent": "Carpinteria"
+  },
+  {
+    "date": "Thu, Oct 11",
+    "time": "5:00 PM",
+    "homeAway": "away",
+    "locaton": "Simi Valley High School",
+    "level": "JV",
+    "type": "non-league",
+    "opponent": "Simi Valley"
+  },
+  {
+    "date": "Fri, Oct 19",
+    "time": "4:30 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "JV",
+    "type": "league",
+    "opponent": "Santa Paula"
+  },
+  {
+    "date": "Fri, Oct 26",
+    "time": "4:30 PM",
+    "homeAway": "home",
+    "locaton": "Fillmore High School",
+    "level": "JV",
+    "type": "league",
+    "opponent": "Malibu"
+  }
+]}
