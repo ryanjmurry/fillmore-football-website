@@ -1,3 +1,9 @@
-<p>
-  coaches works!
-</p>
+<h1>Fillmore High School Coaching Staff</h1>
+<div *ngFor="let coach of coaches">
+  <p>Name: {{coach?.name}}</p>
+  <p>Email: {{coach?.email}}</p>
+  <p>Title: {{coach?.title}}</p>
+  <p>Bio: {{coach?.bio}}</p>
+  <p>Level: {{coach?.level}}</p>
+  <hr>
+</div>
