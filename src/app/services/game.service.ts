@@ -6,8 +6,8 @@ import { Game } from '../models/game.model';
 export class GameService {
   games: FirebaseListObservable<any[]>;
 
-  constructor(private database: AngularFireDatabase) { 
-    this.games = database.list('games');
+  constructor(private db: AngularFireDatabase) { 
+    this.games = db.list('games');
   }
 
   getGames() {
@@ -18,7 +18,19 @@ export class GameService {
     this.games.push(newGame);
   }
 
-  getGameById(gameId) {
-    return this.database.object('games/' + gameId);
+  getGameById(gameId: string) {
+    return this.db.object('games/' + gameId);
+  }
+
+  updateGame(gameToUpdate) {
+    let gameInDb = this.getGameById(gameToUpdate.$key);
+    gameInDb.update({date: gameToUpdate.date,
+                    homeAway: gameToUpdate.homeAway,
+                    level: gameToUpdate.level,
+                    location: gameToUpdate.location,
+                    opponent: gameToUpdate.opponent,
+                    time: gameToUpdate.time,
+                    type: gameToUpdate.type
+    })
   }
 }
