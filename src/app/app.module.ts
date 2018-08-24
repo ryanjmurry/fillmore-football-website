@@ -26,6 +26,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HomeComponent } from './components/home/home.component';
 import { ScheduleAddComponent } from './components/schedule/schedule-add/schedule-add.component';
 import { TimePipe } from './pipes/time.pipe';
+import { CoachesEditComponent } from './components/coaches/coaches-edit/coaches-edit.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -54,7 +55,8 @@ export const firebaseConfig = {
     ScheduleEditComponent,
     HomeComponent,
     ScheduleAddComponent,
-    TimePipe
+    TimePipe,
+    CoachesEditComponent
   ],
   imports: [
     BrowserModule,
