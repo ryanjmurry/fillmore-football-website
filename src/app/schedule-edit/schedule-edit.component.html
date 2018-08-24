@@ -9,8 +9,8 @@
 </select>
 <label>Date</label>
 <input type="date" [ngModel]="selectedGameToEdit.date | date:'yyyy-MM-dd'" (ngModelChange)="selectedGameToEdit.date = $event">
-<!-- <label>Time</label>
-<input type="time" [(ngModel)]="selectedGameToEdit.time"> -->
+<label>Time</label>
+<input type="time" [(ngModel)]="selectedGameToEdit.time">
 <label>Home/Away</label>
 <select [(ngModel)]="selectedGameToEdit.homeAway">
   <option value="home">Home</option>
@@ -25,7 +25,4 @@
   <option value="non-league">Non-league</option>
   <option value="playoff">Playoff</option>
 </select>
-
-
-  <!-- <button class="btn btn-danger"(click)="updateGame(newLevel.value)">Update</button>
-</form> -->
+<button class="btn btn-danger"(click)="beginUpdatingGame(selectedGameToEdit)">Update</button>
