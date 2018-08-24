@@ -24,11 +24,11 @@ export class CoachService {
 
   updateCoach(localUpdatedCoach) {
     let coachInDb = this.getCoachById(localUpdatedCoach.$key);
-    coachInDb.update({date: localUpdatedCoach.name,
-                    homeAway: localUpdatedCoach.email,
+    coachInDb.update({name: localUpdatedCoach.name,
+                    email: localUpdatedCoach.email,
                     level: localUpdatedCoach.level,
-                    location: localUpdatedCoach.title,
-                    opponent: localUpdatedCoach.bio
+                    title: localUpdatedCoach.title,
+                    bio: localUpdatedCoach.bio
     })
   }
 
