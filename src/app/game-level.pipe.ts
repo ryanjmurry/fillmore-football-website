@@ -9,20 +9,22 @@ import { Game } from './models/game.model';
 export class GameLevelPipe implements PipeTransform {
   transform(input: Game[], level) {
     var output: Game[] = [];
-    if(level === "V") {
-      for (let i = 0; i < input.length; i++) {
-        if (input[i].level === "V") {
-          output.push(input[i]);
+    if (input) {
+      if(level === "V") {
+        for (let i = 0; i < input.length; i++) {
+          if (input[i].level === "V") {
+            output.push(input[i]);
+          }
         }
-      }
-      return output;
-    } else {
-      for (let i = 0; i < input.length; i++) {
-        if (input[i].level === "JV") {
-          output.push(input[i]);
+        return output;
+      } else {
+        for (let i = 0; i < input.length; i++) {
+          if (input[i].level === "JV") {
+            output.push(input[i]);
+          }
         }
+        return output;
       }
-      return output;
     }
   }
 }
