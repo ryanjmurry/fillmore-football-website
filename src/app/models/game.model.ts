@@ -1,6 +1,7 @@
 export class Game {
   constructor(
-    public dateTime: Date,
+    public date: string,
+    public time: string,
     public homeAway: string,
     public location: string,
     public type: string,
