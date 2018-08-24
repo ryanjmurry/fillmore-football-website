@@ -1,3 +1,17 @@
-<p>
-  coaches-edit works!
-</p>
+<h3>Edit Coach</h3>
+<label>Level</label>
+<select id="CoachLevelInput" [(ngModel)]="selectedCoachToEdit.level">
+  <option value="V">Varsity</option>
+  <option value="JV">JV</option>
+</select>
+<label>Coach Name: </label>
+<input [(ngModel)]="selectedCoachToEdit.name">
+<br>
+<label>Email</label>
+<input [(ngModel)]="selectedCoachToEdit.email">
+<label>Title</label>
+<input [(ngModel)]="selectedCoachToEdit.title">
+<label>Bio</label>
+<textarea [(ngModel)]="selectedCoachToEdit.bio"></textarea>
+<label>Type</label>
+<button class="btn btn-danger"(click)="beginUpdatingCoach(selectedCoachToEdit)">Update</button>
