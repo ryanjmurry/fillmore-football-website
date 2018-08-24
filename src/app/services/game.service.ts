@@ -22,15 +22,20 @@ export class GameService {
     return this.db.object('games/' + gameId);
   }
 
-  updateGame(gameToUpdate) {
-    let gameInDb = this.getGameById(gameToUpdate.$key);
-    gameInDb.update({date: gameToUpdate.date,
-                    homeAway: gameToUpdate.homeAway,
-                    level: gameToUpdate.level,
-                    location: gameToUpdate.location,
-                    opponent: gameToUpdate.opponent,
-                    time: gameToUpdate.time,
-                    type: gameToUpdate.type
+  updateGame(localUpdatedGame) {
+    let gameInDb = this.getGameById(localUpdatedGame.$key);
+    let newDate = new Date(localUpdatedGame.date + " " + localUpdatedGame.time);
+    let formattedDate = newDate.toLocaleString('en-us', { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+    gameInDb.update({date: formattedDate,
+                    homeAway: localUpdatedGame.homeAway,
+                    level: localUpdatedGame.level,
+                    location: localUpdatedGame.location,
+                    opponent: localUpdatedGame.opponent,
+                    time: localUpdatedGame.time,
+                    type: localUpdatedGame.type
     })
   }
+  // let newDate = new Date(dateInput + " " + timeInput);
+    // dateInput = newDate.toLocaleString('en-us', { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+    // timeInput = newDate.toLocaleTimeString('en-US', {hour: '2-digit', minute:'numeric'});
 }
