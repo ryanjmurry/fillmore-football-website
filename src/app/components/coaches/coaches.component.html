@@ -5,5 +5,10 @@
   <p>Title: {{coach?.title}}</p>
   <p>Bio: {{coach?.bio}}</p>
   <p>Level: {{coach?.level}}</p>
+  <span (click)="editCoachClickedToggle(coach)"><fa name="edit"></fa></span>
+  <span (click)="deleteCoach(coach)"><fa name="trash"></fa></span>
   <hr>
+</div>
+<div *ngIf="editCoachClicked">
+  <app-coaches-edit [selectedCoachToEdit]="selectedCoachToEdit"></app-coaches-edit>
 </div>
