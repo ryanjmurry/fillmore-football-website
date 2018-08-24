@@ -41,3 +41,7 @@
   </div>
   <button class="btn btn-danger"(click)="submitForm(newLevel.value, newOpponent.value, newDate.value, newTime.value, newHomeAway.value, newLocation.value, newType.value)">Submit</button>
 </form>
+
+<div *ngFor="let game of games">
+  {{game.opponent}}
+</div>
