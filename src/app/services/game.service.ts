@@ -35,7 +35,9 @@ export class GameService {
                     type: localUpdatedGame.type
     })
   }
-  // let newDate = new Date(dateInput + " " + timeInput);
-    // dateInput = newDate.toLocaleString('en-us', { weekday: "short", month: "short", day: "numeric", year: "numeric" });
-    // timeInput = newDate.toLocaleTimeString('en-US', {hour: '2-digit', minute:'numeric'});
+
+  deleteGame(localGameToDelete) {
+    let gameInDb = this.getGameById(localGameToDelete.$key);
+    gameInDb.remove();
+  }
 }
