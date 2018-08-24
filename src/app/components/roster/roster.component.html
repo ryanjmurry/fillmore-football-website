@@ -1,16 +1,43 @@
 <h1>Fillmore High School Roster</h1>
-<div *ngFor="let player of players">
-  <p>First Name: {{player?.firstName}}</p>
-  <p>Last Name: {{player?.lastName}}</p>
-  <p>Number: #{{player?.number}}</p>
-  <p>Offensive Position: {{player?.offPosition}}</p>
-  <p>Defensive Position: {{player?.defPosition}}</p>
-  <p>Grade: {{player?.grade}}</p>
-  <p>Level: {{player?.level}}</p>
-  <span (click)="editPlayerClickedToggle(player)"><fa name="edit"></fa></span>
-  <span (click)="deletePlayer(player)"><fa name="trash"></fa></span>
-  <hr>
+<div class="row">
+  <div class="col">
+    <p>Number</p>
+  </div>
+  <div class="col">
+    <p>Name</p>
+  </div>
+  <div class="col">
+    <p>Position</p>
+  </div>
+  <div class="col">
+    <p>Grade</p>
+  </div>
+  <div class="col">
+  </div>
 </div>
+<ul class="list-group list-group-flush">
+    <!-- <li class="list-group-item" *ngFor="let player of players | playerlevel:filterPlayersByLevelParam"> -->
+    <li class="list-group-item" *ngFor="let player of players">
+      <div class="row">
+        <div class="col">
+          <p>#{{player?.number}}</p>
+        </div>
+        <div class="col">
+          <p>{{player?.lastName}}, {{player?.firstName}}</p>
+        </div>
+        <div class="col">
+          <p>{{player?.offPosition}}, {{player?.defPosition}}</p>
+        </div>
+        <div class="col">
+          <p>{{player?.grade}}</p>
+        </div>
+        <div class="col">
+          <span (click)="editPlayerClickedToggle(player)"><fa name="edit"></fa></span>
+          <span (click)="deletePlayer(player)"><fa name="trash"></fa></span>
+        </div>
+      </div>
+    </li>
+</ul>
 <div *ngIf="editPlayerClicked">
   <app-roster-edit [selectedPlayerToEdit]="selectedPlayerToEdit"></app-roster-edit>
 </div>
