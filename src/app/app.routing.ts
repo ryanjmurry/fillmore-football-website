@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ScheduleAddComponent } from './schedule-add/schedule-add.component';
+import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
 
 const appRoutes: Routes = [ 
   {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'schedule/add',
     component: ScheduleAddComponent
+  },
+  {
+    path: 'schedule/edit/:id',
+    component: ScheduleEditComponent
   }
 ];
 
