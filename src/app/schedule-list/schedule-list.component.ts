@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
+import { Router } from '@angular/router';
+import { Game } from '../models/game.model';
+
 
 @Component({
   selector: 'app-schedule-list',
@@ -9,7 +12,7 @@ import { GameService } from '../game.service';
 export class ScheduleListComponent implements OnInit {
   games;
 
-  constructor(private gameService: GameService) {}
+  constructor(private gameService: GameService, private router: Router) {}
   
   ngOnInit() {
     this.gameService.getGames().subscribe(schedule => {
@@ -31,5 +34,9 @@ export class ScheduleListComponent implements OnInit {
 
   filterScheduleByType(gameTypeOption: string) {
     this.filterGamesByType = gameTypeOption
+  }
+
+  goToEditPage(clickedGame) {
+    this.router.navigate(['schedule/edit', clickedGame.$key])
   }
 }
