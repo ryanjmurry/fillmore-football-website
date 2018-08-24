@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RosterService } from '../../../services/roster.service';
 
 @Component({
   selector: 'app-roster-edit',
   templateUrl: './roster-edit.component.html',
-  styleUrls: ['./roster-edit.component.css']
+  styleUrls: ['./roster-edit.component.css'],
+  providers: [RosterService]
 })
-export class RosterEditComponent implements OnInit {
+export class RosterEditComponent {
+  @Input() selectedPlayerToEdit;
 
-  constructor() { }
+  constructor(private rosterService: RosterService) {}
 
-  ngOnInit() {
+  beginUpdatingPlayer(playerToUpdate) {
+    this.rosterService.updatePlayer(playerToUpdate);
   }
-
 }
