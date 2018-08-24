@@ -24,6 +24,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HomeComponent } from './home/home.component';
+import { ScheduleAddComponent } from './schedule-add/schedule-add.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -50,7 +51,8 @@ export const firebaseConfig = {
     ScheduleFilterByTypeComponent,
     GameTypePipe,
     ScheduleEditComponent,
-    HomeComponent
+    HomeComponent,
+    ScheduleAddComponent
   ],
   imports: [
     BrowserModule,
