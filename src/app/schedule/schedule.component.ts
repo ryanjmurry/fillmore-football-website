@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Game } from '../models/game.model';
+import { Component } from '@angular/core';
 import { GameService } from '../game.service';
 
 @Component({
@@ -8,13 +7,8 @@ import { GameService } from '../game.service';
   styleUrls: ['./schedule.component.css'],
   providers: [GameService]
 })
-export class ScheduleComponent implements OnInit {
-  schedule: Game[];
+export class ScheduleComponent {
 
-  constructor(private gameService: GameService) { }
-
-  ngOnInit() {
-    this.schedule = this.gameService.getGames();
-  }
+  constructor() { }
 
 }
