@@ -17,7 +17,6 @@ import { ScheduleFilterByLevelComponent } from './components/schedule/schedule-f
 import { ScheduleFilterByHomeAwayComponent } from './components/schedule/schedule-filter-by-home-away/schedule-filter-by-home-away.component';
 import { ScheduleFilterByTypeComponent } from './components/schedule/schedule-filter-by-type/schedule-filter-by-type.component';
 import { ScheduleEditComponent } from './components/schedule/schedule-edit/schedule-edit.component';
-import { GameLevelPipe } from './pipes/game-level.pipe';
 import { GameHomeAwayPipe } from './pipes/game-home-away.pipe';
 import { GameTypePipe } from './pipes/game-type.pipe';
 import { masterFirebaseConfig } from './api-keys';
@@ -52,7 +51,6 @@ export const firebaseConfig = {
     LoginComponent,
     NavbarComponent,
     ScheduleListComponent,
-    GameLevelPipe,
     ScheduleFilterByLevelComponent,
     ScheduleFilterByHomeAwayComponent,
     GameHomeAwayPipe,
