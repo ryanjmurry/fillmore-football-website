@@ -14,7 +14,6 @@ export class RosterComponent implements OnInit {
 
   sortNumberAsc: boolean = false;
   sortLastNameAsc: boolean = false;
-  sortPosAsc: boolean = false;
   sortGradeAsc: boolean = false;
 
   constructor(private rosterService: RosterService) { }
@@ -79,9 +78,7 @@ export class RosterComponent implements OnInit {
       this.players.reverse();
     }
   }
-  sortByPos() {
 
-  }
   sortByGrade() {
     if (!this.sortGradeAsc) {
       this.sortGradeAsc = true;
