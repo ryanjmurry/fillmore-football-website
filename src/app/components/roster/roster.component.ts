@@ -11,10 +11,10 @@ export class RosterComponent implements OnInit {
   players;
   editPlayerClicked: boolean = false;
   selectedPlayerToEdit;
-
   sortNumberAsc: boolean = false;
   sortLastNameAsc: boolean = false;
   sortGradeAsc: boolean = false;
+  filterRosterByLevelParam: string = 'all';
 
   constructor(private rosterService: RosterService) { }
 
@@ -91,6 +91,10 @@ export class RosterComponent implements OnInit {
         return parseInt(b.grade) - parseInt(a.grade)
       });
     }
+  }
+
+  filterRosterByLevel(rosterLevelOption: string) {
+    this.filterRosterByLevelParam = rosterLevelOption;
   }
 }
 
