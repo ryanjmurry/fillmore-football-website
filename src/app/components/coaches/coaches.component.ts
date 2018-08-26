@@ -11,7 +11,7 @@ export class CoachesComponent implements OnInit {
   coaches;
   editCoachClicked: boolean = false;
   selectedCoachToEdit;
-  filterCoachesByLevelParam: string = 'V';
+  filterCoachesByLevelParam: string = 'all';
 
   constructor(private coachService: CoachService) { }
 
