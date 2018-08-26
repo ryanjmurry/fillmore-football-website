@@ -16,11 +16,16 @@ export class LevelPipe implements PipeTransform {
           }
         }
         return output;
-      } else {
+      } else if (level === "JV") {
         for (let i = 0; i < input.length; i++) {
           if (input[i].level === "JV") {
             output.push(input[i]);
           }
+        }
+        return output;
+      } else {
+        for (let i = 0; i < input.length; i++) {
+          output.push(input[i]);
         }
         return output;
       }
