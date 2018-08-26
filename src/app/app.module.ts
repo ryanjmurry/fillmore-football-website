@@ -32,6 +32,7 @@ import { RosterAddComponent } from './components/roster/roster-add/roster-add.co
 import { RosterEditComponent } from './components/roster/roster-edit/roster-edit.component';
 import { CoachLevelPipe } from './pipes/coach-level.pipe';
 import { CoachesFilterByLevelComponent } from './components/coaches/coaches-filter-by-level/coaches-filter-by-level.component';
+import { RosterFilterByLevelComponent } from './roster-filter-by-level/roster-filter-by-level.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -67,6 +68,7 @@ export const firebaseConfig = {
     RosterEditComponent,
     CoachLevelPipe,
     CoachesFilterByLevelComponent,
+    RosterFilterByLevelComponent,
   ],
   imports: [
     BrowserModule,
