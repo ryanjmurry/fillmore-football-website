@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CoachService } from '../../services/coach.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-coaches',
   templateUrl: './coaches.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./coaches.component.css'],
   providers: [CoachService]
 })
@@ -12,8 +14,14 @@ export class CoachesComponent implements OnInit {
   editCoachClicked: boolean = false;
   selectedCoachToEdit;
   filterCoachesByLevelParam: string = 'all';
+  isCollapsed = true;
+  closeResult: string;
 
-  constructor(private coachService: CoachService) { }
+  constructor(private coachService: CoachService, private modalService: NgbModal) {}
+  
+  openModal(content) {
+    this.modalService.open(content, { size: 'lg' });
+  }
 
   ngOnInit() {
     this.coachService.getCoaches().subscribe(coaches => {
