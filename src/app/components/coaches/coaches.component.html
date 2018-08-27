@@ -1,60 +1,60 @@
 <h1>Fillmore High School Coaching Staff</h1>
 <app-coaches-filter-by-level (changeSender)="filterCoachesByLevel($event)"></app-coaches-filter-by-level>
-  <div *ngFor="let coach of coaches | level:filterCoachesByLevelParam">
-    <div class="hc-display"*ngIf="coach.title === 'Varsity Head Coach'">
-      <h1>{{coach?.name | uppercase}}</h1>
-      <span (click)="editCoachClickedToggle(coach)"><fa size="2x" name="edit"></fa></span>
-      <span (click)="deleteCoach(coach)"><fa size="2x" name="trash"></fa></span>
-      <hr class="coach-separator">
-      <h2>{{coach?.title | uppercase}}</h2>
-      <div class="hc-image">
-        <img id="hc-photo" src="../../../assets/img/sean-miller.JPG" alt="sean-miller">
+<div *ngFor="let coach of coaches | level:filterCoachesByLevelParam">
+  <div class="hc-display"*ngIf="coach.title === 'Varsity Head Coach'">
+    <h1>{{coach?.name | uppercase}}</h1>
+    <!-- <span placement="left" [ngbPopover]="popContent" [autoClose]="'outside'">
+      <span><fa size="2x" name="trash"></fa></span>
+    </span> -->
+
+    <span (click)="editCoachClickedToggle(coach)"><fa size="2x" name="edit"></fa></span>
+    <span (click)="deleteCoach(coach)"><fa size="2x" name="trash"></fa></span>
+    <hr class="coach-separator">
+    <h2>{{coach?.title | uppercase}}</h2>
+    <div class="hc-image">
+      <img id="hc-photo" src="../../../assets/img/sean-miller.JPG" alt="sean-miller">
+    </div>
+    <div>
+      <p class="coach-bio-button"(click)="openModal(content)"><fa name="caret-right"></fa> FULL BIO</p>
+    </div>
+  </div>
+  <ul class="list-group-flush">
+    <li class="list-group-item">
+      <div class="coach-image coach-list-item">
+        <img id="asst-photo" src="../../../assets/img/conor-miller.JPG" alt="sean-miller">
       </div>
-      <div>
+      <div class="asst-coach-info coach-list-item">
+        <p class="coach-title">{{coach?.title | uppercase}}</p>
+        <p class="coach-name">{{coach?.name | uppercase}}</p>
         <p class="coach-bio-button"(click)="openModal(content)"><fa name="caret-right"></fa> FULL BIO</p>
       </div>
+      <div class="coach-buttons coach-list-item float-right">
+      <ng-template #popContent>
+          <button class="btn btn-sm btn-outline-danger" (click)="deleteCoach(coach)">Delete Forever</button>
+        </ng-template>
+        <a data-trigger="focus" [ngbPopover]="popContent" [popoverTitle]="popTitle">
+            <fa size="2x" name="trash"></fa>
+        </a>
+        <span (click)="editCoachClickedToggle(coach)"><fa size="2x" name="edit"></fa></span>
+      </div>
+    </li>
+  </ul>
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">{{coach?.name}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-    <ul class="list-group-flush">
-      <li class="list-group-item">
-        <div class="coach-image coach-list-item">
-          <img id="asst-photo" src="../../../assets/img/conor-miller.JPG" alt="sean-miller">
-        </div>
-        <div class="asst-coach-info coach-list-item">
-          <p class="coach-title">{{coach?.title | uppercase}}</p>
-          <p class="coach-name">{{coach?.name | uppercase}}</p>
-          <p class="coach-bio-button"(click)="openModal(content)"><fa name="caret-right"></fa> FULL BIO</p>
-        </div>
-        <div class="coach-buttons coach-list-item float-right">
-          <span (click)="editCoachClickedToggle(coach)"><fa size="2x" name="edit"></fa></span>
-          <span (click)="deleteCoach(coach)"><fa size="2x" name="trash"></fa></span>
-        </div>
-      </li>
-    </ul>
-    <ng-template #content let-c="close" let-d="dismiss">
-      <div class="modal-header">
-        <h4 class="modal-title">{{coach?.name}}</h4>
-        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <a href="mailto:{{coach.email}}"><fa name="envelope"></fa>{{coach?.email}}</a>
-        <p>{{coach.bio}}}</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
-      </div>
-    </ng-template>
-<div *ngIf="editCoachClicked">
-  <app-coaches-edit [selectedCoachToEdit]="selectedCoachToEdit"></app-coaches-edit>
+    <div class="modal-body">
+      <a href="mailto:{{coach.email}}"><fa name="envelope"></fa>{{coach?.email}}</a>
+      <p>{{coach.bio}}}</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
+    </div>
+  </ng-template>
+  <div *ngIf="editCoachClicked && selectedCoachToEdit.$key === coach.$key">
+    <app-coaches-edit [selectedCoachToEdit]="selectedCoachToEdit"></app-coaches-edit>
+  </div>
 </div>
-
-<!-- 
-
-
-  <span (click)="openModal(content)"><fa name="info"></fa></span> -->
-  
-
-<!--
-          
--->

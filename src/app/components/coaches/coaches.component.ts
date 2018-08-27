@@ -39,7 +39,6 @@ export class CoachesComponent implements OnInit {
   }
 
   deleteCoach(coachToDelete) {
-    if (confirm("Do you really want to delete"))
     this.coachService.deleteCoach(coachToDelete);
   }
 

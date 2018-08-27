@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CoachService } from '../../../services/coach.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { CoachService } from '../../../services/coach.service';
 })
 export class CoachesEditComponent {
   @Input() selectedCoachToEdit;
+  @Output() eventSender = new EventEmitter();
 
   constructor(private coachService: CoachService) {}
 
