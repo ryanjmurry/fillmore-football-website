@@ -1,0 +1,46 @@
+#hc-photo {
+  width: 300px;
+}
+
+.coach-name {
+  font-weight: bolder;
+  font-size: 2em;
+  color: #666666;
+}
+
+.varsity-hc-slot {
+  border: none;
+}
+
+.asst-photo {
+  width: 150px;
+}
+
+.coach-list-item {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+#asst-photo {
+  width: 150px;
+}
+
+.coach-title {
+  margin-bottom: -10px;
+}
+
+.coach-name {
+  margin-bottom: -10px;
+}
+
+.hc-display {
+  display: block;
+  text-align: center;
+}
+
+.coach-separator {
+  border: none;
+  height: 5px;
+  color: black;
+  background-color: blue;
+}
