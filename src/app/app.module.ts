@@ -32,6 +32,7 @@ import { RosterEditComponent } from './components/roster/roster-edit/roster-edit
 import { LevelPipe } from './pipes/level.pipe';
 import { CoachesFilterByLevelComponent } from './components/coaches/coaches-filter-by-level/coaches-filter-by-level.component';
 import { RosterFilterByLevelComponent } from './components/roster/roster-filter-by-level/roster-filter-by-level.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -75,7 +76,8 @@ export const firebaseConfig = {
     AngularFontAwesomeModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    routing
+    routing,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
